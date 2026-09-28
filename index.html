@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Prakash Joshi — official personal brand, social media and future business website.">
+<meta name="theme-color" content="#0b1220">
+<title>Prakash — Official</title>
+<style>
+:root{
+  --bg:#07101f; --panel:#0d1829; --panel2:#111f33; --text:#f7fafc;
+  --muted:#aab7c7; --line:rgba(255,255,255,.10); --accent:#8ec5ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 15% 5%,rgba(91,154,255,.18),transparent 30%),
+  radial-gradient(circle at 90% 25%,rgba(123,92,255,.13),transparent 28%),
+  var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(920px,calc(100% - 32px));margin:auto}
+nav{
+  position:sticky;top:0;z-index:10;background:rgba(7,16,31,.78);
+  backdrop-filter:blur(16px);border-bottom:1px solid var(--line)
+}
+.navin{height:66px;display:flex;align-items:center;justify-content:space-between}
+.navbrand{font-family:Georgia,serif;font-size:25px;font-weight:700;letter-spacing:-.5px}
+.navlinks{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.hero{text-align:center;padding:68px 0 40px}
+.photo{
+ width:142px;height:142px;object-fit:cover;border-radius:50%;
+ border:3px solid rgba(255,255,255,.85);box-shadow:0 20px 60px rgba(0,0,0,.35)
+}
+.logoText{
+ margin:24px 0 3px;font-family:Georgia,"Times New Roman",serif;
+ font-size:clamp(52px,12vw,88px);font-weight:700;letter-spacing:-4px;
+ line-height:1;background:linear-gradient(110deg,#fff,#9bc8ff);
+ -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.name{margin:0;color:var(--muted);font-size:16px}
+.tagline{max-width:620px;margin:22px auto 0;color:#d2dbe6;line-height:1.75;font-size:17px}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:13px 20px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.07);font-weight:650}
+.btn.primary{background:#fff;color:#09111e;border-color:#fff}
+.section{padding:30px 0}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:15px}
+h2{font-family:Georgia,serif;font-size:29px;margin:0}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.card{
+ background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.035));
+ border:1px solid var(--line);border-radius:19px;padding:18px;
+ transition:.2s transform,.2s border-color
+}
+.card:hover{transform:translateY(-2px);border-color:rgba(142,197,255,.4)}
+.cardtop{display:flex;align-items:center;justify-content:space-between}
+.icon{
+ width:43px;height:43px;border-radius:13px;display:grid;place-items:center;
+ background:rgba(255,255,255,.08);font-weight:800;font-size:20px
+}
+.arrow{color:#8798ab;font-size:21px}
+.cardtitle{margin:14px 0 4px;font-weight:700;font-size:17px}
+.cardsub{margin:0;color:var(--muted);font-size:13px}
+.about{
+ display:grid;grid-template-columns:1fr 1fr;gap:14px
+}
+.panel{
+ background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px
+}
+.panel p{color:#c4cfdb;line-height:1.8;margin:0}
+.future{
+ text-align:center;padding:40px 22px;
+ background:linear-gradient(145deg,#101e32,#0a1423);
+}
+.badge{display:inline-block;padding:7px 12px;border-radius:999px;border:1px solid var(--line);color:var(--accent);font-size:12px;font-weight:700}
+footer{padding:42px 0 95px;text-align:center;color:#738296;font-size:13px}
+.mobilebar{
+ display:none;position:fixed;bottom:0;left:0;right:0;z-index:20;
+ padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+ background:rgba(7,16,31,.9);backdrop-filter:blur(16px);border-top:1px solid var(--line)
+}
+.mobilebarin{display:flex;justify-content:space-around}
+.mobilebar a{font-size:12px;color:#cbd5e1;text-align:center}
+.mobilebar b{display:block;font-size:18px;margin-bottom:2px}
+@media(max-width:650px){
+ .navlinks{display:none}.hero{padding-top:45px}.grid,.about{grid-template-columns:1fr}
+ .tagline{font-size:15px}.mobilebar{display:block}
+ .container{width:min(100% - 24px,920px)}
+}
+</style>
+</head>
+<body>
+<nav>
+ <div class="container navin">
+  <a class="navbrand" href="#">Prakash</a>
+  <div class="navlinks">
+   <a href="#social">Social</a><a href="#about">About</a><a href="#business">Business</a>
+  </div>
+ </div>
+</nav>
+
+<main class="container">
+<section class="hero">
+ <img class="photo" src="assets/profile.jpg" alt="Prakash Joshi">
+ <div class="logoText">Prakash</div>
+ <p class="name">Prakash Joshi</p>
+ <p class="tagline">Welcome to my official website — one place for my social media, projects, updates and future business activities.</p>
+ <div class="actions">
+  <a class="btn primary" href="#social">Explore my links</a>
+  <a class="btn" href="mailto:joshipurakashu@gmail.com">Contact me</a>
+ </div>
+</section>
+
+<section id="social" class="section">
+ <div class="sectionhead"><div><div class="kicker">Connect</div><h2>Find me online</h2></div></div>
+ <div class="grid">
+  <a class="card" href="https://www.facebook.com/share/1GqC8d7o6w/?mibextid=wwXIfr" target="_blank" rel="noopener">
+   <div class="cardtop"><div class="icon">f</div><div class="arrow">↗</div></div>
+   <div class="cardtitle">Facebook</div><p class="cardsub">Connect on Facebook</p>
+  </a>
+  <a class="card" href="https://www.instagram.com/prakashjoshiofficial1" target="_blank" rel="noopener">
+   <div class="cardtop"><div class="icon">◎</div><div class="arrow">↗</div></div>
+   <div class="cardtitle">Instagram</div><p class="cardsub">@prakashjoshiofficial1</p>
+  </a>
+  <a class="card" href="https://www.tiktok.com/@prakashjoshiofficial1" target="_blank" rel="noopener">
+   <div class="cardtop"><div class="icon">♪</div><div class="arrow">↗</div></div>
+   <div class="cardtitle">TikTok</div><p class="cardsub">@prakashjoshiofficial1</p>
+  </a>
+  <a class="card" href="https://wa.me/817090860383" target="_blank" rel="noopener">
+   <div class="cardtop"><div class="icon">◔</div><div class="arrow">↗</div></div>
+   <div class="cardtitle">WhatsApp</div><p class="cardsub">Message me directly</p>
+  </a>
+  <a class="card" href="mailto:joshipurakashu@gmail.com">
+   <div class="cardtop"><div class="icon">✉</div><div class="arrow">↗</div></div>
+   <div class="cardtitle">Email</div><p class="cardsub">joshipurakashu@gmail.com</p>
+  </a>
+ </div>
+</section>
+
+<section id="about" class="section">
+ <div class="sectionhead"><div><div class="kicker">Profile</div><h2>About me</h2></div></div>
+ <div class="about">
+  <div class="panel"><p>Hi, I’m <strong>Prakash Joshi</strong>. This is my official personal space for sharing my social media, projects and updates.</p></div>
+  <div class="panel"><p>The website is designed to grow with me — from a personal brand today to future projects, services or business tomorrow.</p></div>
+ </div>
+</section>
+
+<section id="business" class="section">
+ <div class="panel future">
+  <span class="badge">COMING SOON</span>
+  <h2 style="margin:16px 0 10px">Future Business</h2>
+  <p>A new chapter is coming soon. This section can later become a full business page with services, products, portfolio and contact options.</p>
+ </div>
+</section>
+</main>
+
+<footer>© 2026 Prakash Joshi · Official Website</footer>
+
+<div class="mobilebar">
+ <div class="mobilebarin">
+  <a href="#social"><b>◉</b>Social</a>
+  <a href="https://wa.me/817090860383" target="_blank"><b>◔</b>WhatsApp</a>
+  <a href="mailto:joshipurakashu@gmail.com"><b>✉</b>Email</a>
+  <a href="#business"><b>＋</b>Future</a>
+ </div>
+</div>
+</body>
+</html>
